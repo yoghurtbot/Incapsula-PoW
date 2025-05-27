@@ -8,7 +8,7 @@ A high-performance GPU-accelerated solver for the Incapsula proof-of-work SHA-1 
 
 When accessing certain protected resources, Incapsula issues a proof-of-work challenge: a client must find a nonce that, when combined with a salt and fed into the SHA-1 algorithm, matches a server-provided target hash within a time limit. This solver:
 
-* Reads the time limit (`T`), target hash (`D`), and salt (`S`) from server challenge data.
+* Reads the time limit (`T`), target hash (`D`), and salt (`S`) from script challenge data.
 * Launches thousands of CUDA threads to test nonces in parallel.
 * Uses constant memory and unrolled loops for maximum throughput.
 * Reports the first valid nonce (if found) and timing statistics.
@@ -44,8 +44,6 @@ T = 16777215              # max execution time in milliseconds
 D = 497f88137519078e6ace71977097c7d89ef54f2e  # 20-byte SHA-1 target
 S = 49eafae158444af6913527f9c997e768          # 16-byte salt
 ```
-
-The outer `"s"` field is the server’s signed envelope and is not used by this solver.
 
 ## Requirements
 
@@ -112,7 +110,3 @@ No valid nonce found in 1048576 iterations within 16777215 ms
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-*Happy hashing!*
