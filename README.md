@@ -99,6 +99,7 @@ No valid nonce found in 1048576 iterations within 16777215 ms
 ```
 
 ## Performance Comparison
+*Note: *: CPU benchmark was run single-threaded 
 
 | Platform | Hardware                    | Time to Solve      |
 | -------- | --------------------------- | ------------------ |
