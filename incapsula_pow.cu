@@ -163,7 +163,7 @@ int main(int argc, char** argv) {
     const uint32_t threadsPerBlock = 256;
     uint32_t blocks = (batchSize + threadsPerBlock - 1) / threadsPerBlock;
 
-	uint32_t startNonce = 0;
+    uint32_t startNonce = 0;
     uint64_t totalIterations = 0;
 
     // Start timing and loop until nonce found or time expires
