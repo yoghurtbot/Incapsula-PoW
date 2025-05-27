@@ -40,7 +40,7 @@ Decoding it we get:
 For the example above, you would use:
 
 ```text
-T = 16777215              # max execution time in milliseconds
+T = 16777215                                  # max execution time in milliseconds
 D = 497f88137519078e6ace71977097c7d89ef54f2e  # 20-byte SHA-1 target
 S = 49eafae158444af6913527f9c997e768          # 16-byte salt
 ```
